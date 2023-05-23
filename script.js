@@ -136,23 +136,20 @@ clearButton.addEventListener("click",clear);
 
 function clear() {
   document.querySelector("#answer").innerHTML = "0"
+  document.querySelector("#answer").innerHTML = ""
+  event.preventDefault();
 
 
 }
 
-// const displayButton = document.querySelector("#displayBtn");
-// displayButton.addEventListener("click",display);
+const randomButton = document.querySelector("#randBtn");
+randomButton.addEventListener("click",randomNumber);
 
-// function display() {
-//     let subAnswer = subtract();
-//     let addAnswer = addition();
-//     let container = (subAnswer || addAnswer)
-//    if (container == subAnswer) {
-//     document.querySelector("#answer").innerHTML = subAnswer
-//    } 
-//    else {document.querySelector("#answer").innerHTML = addAnswer
-// }
-   
+function randomNumber() {
+    let generatedRandomNumber = Math.floor(Math.random()*1000000)+1
+    document.querySelector("#answer").innerHTML = generatedRandomNumber
+   event.preventDefault();
+   return generatedRandomNumber
     
-// }
+}
 

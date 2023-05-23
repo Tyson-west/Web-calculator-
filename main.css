@@ -104,6 +104,7 @@ animation: roundglow 10s 500ms linear infinite;
 }
 .answer-box > h3{
     color: black;
+    
 }
 
 @keyframes roundglow{
@@ -157,7 +158,14 @@ animation: roundglow 10s 500ms linear infinite;
     }
 }
 @media (max-width:474px){
+   .webApp-name{
+    left: 85px;
+    top: 18px;
+    
+   }
     .webApp-name > h2{
-        visibility: hidden;
+        writing-mode: initial;
+        font-size: 1rem;
+         /* visibility: hidden;  */
     }
 }
